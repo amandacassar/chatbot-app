@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Master Bot</title>
+        <!-- css and javascript files used -->
+        <link type="text/css" rel="stylesheet" href="lib/bootstrap.css">
+        <link type="text/css" rel="stylesheet" href="style.css">
+        <script src="lib/bootstrap.js"></script>
+        <script src="lib/jquery-3-3-1.js"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    </head>
+
+    <body>
+        <header>MasterBot chat-box</header>
+        
+        <div class="chars-area">
+            <div class= "character inline-block" id="char">                
+            </div>   
+            <div class= "btn inline-block bot-button" id="bot_sound">
+                <img src="assets/unmuted.jpg">
+            </div>
+            <!-- display initial bot message on top -->
+            <div class="bot-bubble-first inline-block">Hi! Can I help you? I can provide your schedule, deadlines, exams, results, 
+                emails or extra-curricular activities.  I can also tell you the weather forecast and the local news.
+                Just press your mic once every time you want to talk to me.</div>
+            <div class= "btn inline-block user-button" id="mic">
+                <img src="assets/red_mic.jpg">
+            </div>
+            <div class= "user-icon inline-block">
+                <img src ="assets/student.jpg">
+            </div> 
+        </div>
+
+        <!-- the container of the chat area -->
+        <div class="container-fluid chat-container" id="chat_container">            
+            <!-- the chat area where dialogue bubbles are added -->
+            <div class="chat-area">
+            </div>
+        </div>
+
+        <script>
+            // call the function to peform first load of the page - to select the chatbot character for the day
+            window.onload = firstLoad()
+
+            function firstLoad()
+            {
+                let char = document.getElementById("char");
+                // obtain today's day of the week (0-6) (0=Sunday)
+                let d = new Date();
+                let day = d.getDay();;
+                // array containing the character image name
+                n = ["owl6", "owl1", "owl2", "owl3", "owl4", "owl5", "owl6"];
+                // display the owl that corresponds to today's day of the wek
+                character = '<img src="assets/'+ n[day] +'.jpg">';
+                char.innerHTML = character;
+            }
+        </script>
+
+        <script type="text/javascript" src="script.js"></script>
+        <script type="text/javascript" src="data.js"></script>
+    </body>
+</html>

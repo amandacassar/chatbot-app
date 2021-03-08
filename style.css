@@ -1,0 +1,215 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+}
+
+body
+{
+    background-color: #ffffff;
+}
+
+header
+{
+    width: 100%;
+    float: left;
+    height: 4vh;
+    font-size: 150%;
+    word-spacing: 30px;
+    letter-spacing: 20px;
+    background: #fff;
+    color: #fa9806;
+    text-align: left;
+    padding-left: 1%;
+    line-height: 5vh;
+    box-shadow: 15px 0 5px #b9b7b7;
+    position: fixed;
+    z-index: 2;
+}
+
+/* area displaying the owl character and student icon */
+.chars-area
+{
+    width: 100%;
+    float: left;
+    margin-top: 3vh;
+    padding-top: 1%;
+    position: fixed;
+    background: #fff;
+    z-index: 1;
+}
+
+/* owl character */
+.character
+{
+    margin-left: 5%;
+    width: 10%;
+    height: 10%;
+    padding: 1px;
+}
+
+/* bot mute/unmute button */
+.bot-button
+{
+    margin-left: 1%;
+    margin-top: 5%;
+    width: 3%;
+    height: 3%;
+    background-color: transparent;
+    background-position : center center;
+    border: transparent;
+    padding:1px;
+}
+
+/* student icon */
+.user-icon
+{
+    margin-left: 1%;
+    width: 7%;
+    height: 7%;
+    padding: 1px;
+}
+
+/* student mic button */
+.user-button
+{
+    margin-left: 13%;
+    margin-top: 2%;
+    width: 5%;
+    height: 5%;
+    background-color: transparent;
+    background-position : center center;
+    border: transparent;
+    padding:1px;
+}
+
+.inline-block 
+{
+    display: inline-block;
+}
+
+/* area containing the dialogues */
+.chat-container
+{
+    width: 100%;
+    margin-top: 200px;
+    margin-bottom: 15px;
+    float: left;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+/* adding a new dialogue */
+.chat-area
+{
+    width: 100%;
+    float: left;
+    height: 500px;
+}
+
+/* bot's dialogue bubble displayed at the top */
+.bot-bubble-first
+{
+	position: relative;
+	background: #e4fda0;
+	border-radius: .4em;
+    text-align: center left;
+    font-size: 16px;
+    width: 45%;
+    flex-wrap: wrap;
+    padding: 0.5%;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.bot-bubble-first:after 
+{
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 0;
+	border: 15px solid transparent;
+	border-right-color: #e4fda0;
+	border-bottom: 0;
+	border-left: 0;
+	margin-left: -15px;
+	margin-top: -8px;
+}
+
+/* bot's dialogue bubble - general */
+.bot-bubble
+{
+	position: relative;
+	background: #e4fda0;
+	border-radius: .4em;
+    text-align: center left;
+    font-size: 16px;
+    width: fit-content;
+    max-width: 60%;
+    flex-wrap: wrap;
+    padding: 0.5%;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.bot-bubble:after 
+{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 15px;
+	border: 15px solid transparent;
+	border-bottom-color: #e4fda0;
+	border-top: 0;
+	border-left: 0;
+	margin-left: -8px;
+	margin-top: -15px;
+}
+
+/* student's dialogue bubble */
+.user-bubble
+{
+	position: relative;
+	background: #c3c2ff;
+	border-radius: .4em;
+    text-align: center left;
+    font-size: 16px;
+    width: fit-content;
+    max-width: 60%;
+    flex-wrap: wrap;
+    padding: 0.5%;
+    margin-top: 20px;
+    margin-right: 10px;
+    margin-left: auto;
+}
+
+.user-bubble:after 
+{
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 8px;
+	border: 15px solid transparent;
+	border-bottom-color: #c3c2ff;
+	border-top: 0;
+	border-right: 0;
+	margin-left: -8px;
+	margin-top: -15px;
+}
+
+/* display an image in the dialogue bubble */
+.img-reply
+{
+    width: 50%;
+    height: 50%;
+}
+
+/* enlarge image when user hovers on it */
+.img-reply > img:hover 
+{
+    width: 200%;
+    height: 200%;
+  }
